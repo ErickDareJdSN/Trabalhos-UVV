@@ -1,0 +1,15 @@
+import random
+
+num = random.randint(10, 90)
+num = []
+
+for i in range(10, 90):
+    if i % 5 == 2:
+        num.append(i)
+    if i == 0:
+        break
+
+soma = sum(num)
+
+print("Números escolhidos:", num)
+print("A soma dos números é:", soma)
