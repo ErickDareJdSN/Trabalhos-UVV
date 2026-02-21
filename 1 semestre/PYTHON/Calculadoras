@@ -1,0 +1,19 @@
+import math
+
+def calc(modo):
+    if modo < 1 or modo >4:
+        raise ValueError("Modo inválido. Escolha um número entre 1 e 4.")
+    
+    if modo == 1:
+        modo = "Basicas"
+    elif modo == 2:
+        modo = "Cientificas"
+    elif modo == 3:
+        modo = "Programador"
+    else:
+        modo = "Data e Hora"
+
+    formula_bhaskara = lambda a, b, c: (-b + math.sqrt(b**2 - 4*a*c)) / (2*a)
+    teorema_pitagoras = lambda a, b: math.sqrt(a**2 + b**2)
+
+    return modo, formula_bhaskara, teorema_pitagoras
