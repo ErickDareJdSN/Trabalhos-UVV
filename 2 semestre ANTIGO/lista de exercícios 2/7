@@ -1,0 +1,22 @@
+def exibir_subsequentes(n):
+    # Cria uma lista com os 50 números subsequentes a n
+    subsequentes = [n + i for i in range(1, 51)]
+    return subsequentes
+
+def main():
+    try:
+        # Solicita o número inteiro do usuário
+        n = int(input("Digite um número inteiro: "))
+        
+        # Chama a função para obter os 50 números subsequentes
+        resultado = exibir_subsequentes(n)
+        
+        # Exibe o resultado
+        print(f"Os 50 números subsequentes a {n} são:")
+        print(resultado)
+        
+    except ValueError:
+        print("Erro: Por favor, insira um número inteiro válido.")
+
+if __name__ == "__main__":
+    main()

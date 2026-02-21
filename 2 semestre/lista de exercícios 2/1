@@ -1,5 +1,0 @@
-n = int(3)
-
-for i in range(3, 100):
-    if i % n == 0:
-        print(i)

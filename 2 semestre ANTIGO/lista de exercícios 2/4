@@ -1,0 +1,11 @@
+import random
+
+populacao = 10000
+taxa_desemprego = random.uniform(0.05, 0.25)
+desempregados = int(populacao * taxa_desemprego)
+empregados = populacao - desempregados
+
+print("População total:", populacao)
+print("Taxa de desemprego:", taxa_desemprego)
+print("Número de desempregados:", desempregados)
+print("Número de empregados:", empregados)
