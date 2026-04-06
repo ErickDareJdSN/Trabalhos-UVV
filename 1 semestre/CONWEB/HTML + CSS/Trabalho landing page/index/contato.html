@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações de contato</title>
+    <link rel="stylesheet" href="../css/style.css">
+
+<body>
+    <p>Navegação</p>
+    <nav>
+        <ul>
+            <li><a href="home.html">Página inicial</a></li>
+            <li><a href="curriculo.html">Currículo</a></li>
+            <li><a href="github.html">GitHub</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    <hr>
+    <h1>Formulário para contato</h1>
+    <br>
+    <form action="enviar_contato.php" method="post">
+        <label for="nome">Nome: </label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="tel">Telefone: </label>
+        <input type="tel" id="tel" name="tel" required>
+        <label for="email">E-mail: </label>
+        <input type="email" id="email" name="email" required>
+        <label>Tipo de pessoa:</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="pessoa" value="Física" required>
+                Física
+            </label>
+            <label>
+                <input type="radio" name="pessoa" value="Jurídica">
+                Jurídica
+            </label>
+        </div>
+        <label for="horario">Horário para contato: </label>
+        <input type="time" id="horario" name="horario" required>
+        <label for="servico">Serviço de interesse: </label>
+        <select id="servico" name="servico" required>
+            <option value="">Selecione um serviço</option>
+            <option value="estatica">Páginas estáticas</option>
+            <option value="dinamica">Páginas dinâmicas</option>
+            <option value="profissional">Páginas profissionais</option>
+        </select>
+        <label for="mensagem">Descrição detalhada do pedido: </label>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea>
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+</body>
+
+</html>
