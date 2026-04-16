@@ -111,5 +111,7 @@ CREATE TABLE
         posologia VARCHAR NOT NULL,
         modo_uso TEXT NOT NULL,
         quantidade SMALLINT NOT NULL,
-        CONSTRAINT pk_receitas_medicamentos PRIMARY KEY 
+        CONSTRAINT pk_receitas_medicamentos PRIMARY KEY (id_receita, id_medicamento),
+        CONSTRAINT fk_receitas_medicamentos_receita FOREIGN KEY (id_receita) REFERENCES receitas (id_receita),
+        CONSTRAINT fk_receitas_medicamentos_medicamento FOREIGN KEY (id_medicamento) REFERENCES medicamentos (id_medicamento)
     );
