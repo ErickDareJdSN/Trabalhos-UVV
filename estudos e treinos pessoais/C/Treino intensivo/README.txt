@@ -1,0 +1,1 @@
+Pedi pro GPT me ensinar C e olha no que deu
